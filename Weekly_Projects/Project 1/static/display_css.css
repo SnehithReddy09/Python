@@ -1,0 +1,17 @@
+
+table
+    {
+        width: auto;
+        font: 17px Calibri;
+    }
+table, th, td 
+    {
+        border: solid 1px #DDD;
+        border-collapse: collapse;
+        padding: 2px 3px;
+        text-align: center;
+    }   
+    img {
+        width: 200px;
+        height: 125px;
+      } 
