@@ -17,23 +17,27 @@ import requests
 import json
 
 class json1:
+    #Creation of JSON file and dumping the data into it.
     def create_json(self, data):
         with open("welcome.json", "w") as file:
             return json.dump(data, file)
     
+    # Reading the data present in JSON file and returning it.
     def read_json(self, file):
         with open(file)as file:
             return json.load(file)
-	
+
     #checking whether url exists or not.
     def url_check(self,url):
         try:
             url=requests.get(url)
+	    #return True if URL exits
             return True
         except:
+	    #return False if URL not exits
             return False
 
-    #Reading the data from URL and returning json file.
+    #Reading from url and returning data in json format.
     def read_url(self,url):
         url = requests.get(url)
         return url.json()
