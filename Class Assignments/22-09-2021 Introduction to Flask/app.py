@@ -58,28 +58,10 @@ def display(db_name,collection_name):
 
 app = Flask(__name__) 
 
-def func(name,email,course):
-    data={}
-    data["name"]=name
-    data["email"]=email
-    data["course"]=course
-    insert_data("product","Data",data)
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/submi',methods=['POST'])
-def result():
-    name=request.form['name']
-    email=request.form['email']
-    course=request.form['course']
-    func(name,email,course)
-    return render_template("submit.html")
-
-@app.route('/user')
-def user():
-    return render_template('user.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
