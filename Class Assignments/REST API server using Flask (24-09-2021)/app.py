@@ -32,7 +32,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 db = SQLAlchemy(app)
 
-# create a table inside our database
+# create a table inside our database 
 class APIUserModel(db.Model):
     __tablename__ = 'guvi_data_sciences'
     id = db.Column(db.Integer, primary_key = True)
@@ -45,6 +45,8 @@ class Suman(db.Model):
     name = db.Column(db.String(20))
     email = db.Column(db.String(20))
 
+# Presenting the data in json format in POSTMAN with 'POST' method and then sending it through API
+# From the API requesting data and then storing it in DB and saving the changes.
 @app.route('/write', methods = ['POST'])
 def write():
     id=request.get_json()["id"]
@@ -85,6 +87,7 @@ def fetch_by_id(id):
 def update(id):
     # update = insert + fetch by id 
     a = APIUserModel.query.filter_by(id=id).first()
+    # Storing the initial values of id, name and email in x,y,z before updation.
     x=a.id
     y=a.name
     z=a.email
@@ -102,6 +105,7 @@ def update(id):
         save_to_database.flush()
     id=api_user_model.id
     data=APIUserModel.query.filter_by(id=id).first()
+    #returns the list which consists of data before updation and after updation.
     return jsonify([{"id":x, "name":y, "email":z},{"update":"to"},{"id":data.id, "name":data.name, "email":data.email}])
 
 #delete data 
@@ -112,6 +116,7 @@ def delete(id):
         save_to_database = db.session 
         APIUserModel.query.filter_by(id=id).delete()
         save_to_database.commit()
+	#returning the data which is been deleted for displaying.
         return jsonify([{"id":a.id, "name":a.name, "email":a.email}])
     except:
         return jsonify({"message":"error in deleting data"})
