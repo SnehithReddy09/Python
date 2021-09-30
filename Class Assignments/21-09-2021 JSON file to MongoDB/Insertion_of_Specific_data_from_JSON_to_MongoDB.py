@@ -14,25 +14,30 @@ import json
 from pymongo import MongoClient
 
 class One:
+    #Establishment of connection with MongoDB.
     connection = MongoClient("mongodb://localhost:27017")
 
     def mongo_connection(self):
+	#If connection is made True is returned else False.
         if self.connection:
             return True 
         else:
             return False 
     
     def mongodb_list(self):
+	#checking whether connection is done and if True return list of Database Names.
         if self.mongo_connection() == True:
             return self.connection.list_database_names()
 
     def db_exists(self, db_name):
+	#Return True if particular database name exists.
         if db_name in self.mongodb_list():
             return True
         else:
             return False 
     
     def create_new_collection(self, db_name, new_collection):
+	#If connection is done succesfully new_collection is created and returned.
         if self.connection:
             db_name = self.connection[db_name]
             new_collection = db_name[new_collection]
@@ -47,12 +52,26 @@ class One:
     
     def insert_data(self,db_name,collection_name,id1,product_name,product_price,product_material,product_color):
         if self.connection:
+	    #Creating a dictionary with all the deatils required as keys.
             data={"id":id1,"product_name":product_name,"product_price":product_price,"product_material":product_material,
                   "product_color":product_color}
             self.connection[db_name][collection_name].insertOne(data)
             return "success"
         else:
             return "error"
+    
+    def display(self,db_name,collection_name):
+        a=[]
+        if self.connection:
+	    #Iterating the documents in collection and appending into list.
+            for i in self.connection[db_name][collection_name].find():
+                a.append(i)
+		
+            #Iterating list and displaying contents in it.
+            for i in a:
+                print(i)
+                print("..............")
+    
     
    
 
@@ -61,8 +80,6 @@ obj=One()
 
 db_name="mongo_python"
 collection_name="product"
-print(obj.db_exists(db_name))
-print(obj.create_new_collection(db_name,collection_name))
 file="product.json"
 with open(file)as file:
     x=json.load(file)
