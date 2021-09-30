@@ -1,9 +1,14 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Sep 21 14:57:25 2021
+'''PROGRAM DESCRIPITON: 
+	You have a JSON file with you. Write a python program to insert the data present in the JSON file into your 
+	MongoDB collection in form of documents ?
+'''
 
-@author: Snehith
-"""
+# PROGRAMMED BY: PULI SNEHITH REDDY
+# MAIL ID : snehithreddyp@gmail.com
+# DATE    : 21-09-2021
+# VERSION : 3.7.9
+# CAVEATS : None
+# LICENSE : None
 
 import json
 from pymongo import MongoClient
