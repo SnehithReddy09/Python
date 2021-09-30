@@ -1,3 +1,21 @@
+'''PROGRAM DESCRIPITON: 
+HMTL form for registration is created and after filling the data, the student details like name,email, course are stored in the MongoDB "Registration" database.
+'''
+
+# PROGRAMMED BY: PULI SNEHITH REDDY
+# MAIL ID : snehithreddyp@gmail.com
+
+# DATE    : 23-09-2021
+
+# VERSION : 3.7.9
+
+# CAVEATS : None
+
+# LICENSE : None
+
+
+
+
 from flask import Flask 
 from flask import render_template 
 from flask import redirect 
@@ -63,7 +81,7 @@ def func(name,email,course):
     data["name"]=name
     data["email"]=email
     data["course"]=course
-    insert_data("product","Data",data)
+    insert_data("Registration","Data",data)
 
 @app.route('/')
 def index():
