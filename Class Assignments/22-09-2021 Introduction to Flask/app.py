@@ -25,6 +25,9 @@ def index():
     #Return the html file in the browser
     return render_template('index.html')
 
+@app.route('/user')
+def user():
+    return render_template('user.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
