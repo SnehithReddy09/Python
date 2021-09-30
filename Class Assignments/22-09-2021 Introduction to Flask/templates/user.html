@@ -1,0 +1,61 @@
+<html>
+<head>
+    <script type="text/javascript" src="static\user_js.js"></script>  
+</head>
+<body>
+<form method="post" action="/submi">
+    <center>
+    <br><td colspan="3">
+    <table border="1" bordercolor="#003152">
+    <head> <title>Registration Form</title></head>
+     
+    <tr><br><td rowspan="11">
+    <img src="static\ppt1.jpg" width="600" height="350">
+    </br> </td></tr>
+        <tr> <th colspan="2"> Registration Form</th>
+        <tr> <td> Name : </td>
+	    <td> <input type="text" id="name" name="name"style="background-color:CCCCFF">
+	</tr>
+	<tr >
+	    <td> Email Address : </td>
+        <td> <input type="text" id="email" name="email" placeholder="e.g. abc@gmail.com" width="25" style="background-color:CCCCFF"></td>
+    </tr>   
+    <tr>
+	    <td> Institution Name : </td>
+        <td> <input type="text" id="iname" name="institution" style="background-color:CCCCFF">
+    </tr>
+    <tr>
+	    <td> Course: </td>
+            <td><select name="course" id="course" style="background-color:CCCCFF">
+            <option>Computer Science Engineering [CSE]</option>
+            <option>Civil Engineering [CE]</option>
+            <option>Electronics & Communication Engineering [ECE]</option>
+            <option>Chemical Engineering [CHE]</option>
+            <option>Electrical Engineering [EEE]</option>
+            <option>Mechanical Engineering [ME]</option>
+            <option>Bio Technology[BT]</option>
+        </td>
+    </tr>
+        <tr>
+	    <td> Title of the Paper: </td>
+            <td> <input type="text" id="p_name" name="title" style="background-color:CCCCFF">
+    </tr> 
+    <tr>
+	    <td> No. of Participants: </td>
+            <td><input type="radio" id="i" name="institution" style="background-color:CCCCFF">single
+                <input type="radio" id="i" name="institution" style="background-color:CCCCFF">duo
+             
+    </tr>  
+    <tr>
+	    <td>Payment Type: </td>
+            <td> <select name="title" style="background-color:CCCCFF">
+            <option>Debit Card</option>
+            <option>Credit Card</option>
+    </tr> 
+    <tr><td colspan="2" align="right"> <button onclick="func()" style="background-color:CCCCFF">submit</button></td></tr>
+    </center>
+    </table>
+</form>
+</body>
+</html>
+
