@@ -24,13 +24,16 @@ class json1:
     def read_json(self, file):
         with open(file)as file:
             return json.load(file)
-
+	
+    #checking whether url exists or not.
     def url_check(self,url):
         try:
             url=requests.get(url)
             return True
         except:
             return False
+
+    #Reading the data from URL and returning json file.
     def read_url(self,url):
         url = requests.get(url)
         return url.json()
