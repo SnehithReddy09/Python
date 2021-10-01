@@ -1,17 +1,21 @@
-    
+ 
+'''
+PROGRAM DESCRIPITON: 
+	Retrive the data from URL and converting it into DataFrame Object and storing it in .csv file.
+'''
+
+# PROGRAMMED BY: PULI SNEHITH REDDY
+# MAIL ID : snehithreddyp@gmail.com
+# DATE    : 01-10-2021
+# VERSION : 3.7.9
+# CAVEATS : None
+# LICENSE : None
+
+
 import json
 import requests 
 import pandas as pd
 class One:
-    def create_json(self, data):
-        with open("panda_assigment.json", "w") as file:
-            return json.dump(data, file)
-    
-    # Reading the data present in JSON file and returning it.
-    def read_json(self, file):
-        with open(file)as file:
-            return json.load(file)
-
     #checking whether url exists or not.
     def url_check(self,url):
         try:
