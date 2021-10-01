@@ -1,25 +1,49 @@
+'''PROGRAM DESCRIPITON: 
+	Create a RESTFUL API Server in Python Flask. To achieve your target go through following process:-
+    
+    1) You have to hit the URL "https://api.thedogapi.com/v1/breeds" into a local JSON file into ur localhost.
+    2) From the JSON file scrap the data of the breed of dog, country of origin,
+        bred for which purpose and the image of the dog.
+    3) Display the data in a tabular format into a HTML page.
+    4) Send the extracted data into a MongoDB database with basic CRUD operations associated with it.
+'''
+
+# PROGRAMMED BY: PULI SNEHITH REDDY
+# MAIL ID : snehithreddyp@gmail.com
+# DATE    : 27-09-2021
+# VERSION : 3.7.9
+# CAVEATS : None
+# LICENSE : None
+
 import requests
 import json 
 import json
 from pymongo import MongoClient
 
+#Class which consists of methods related to JSON creation, reading and URL checking and retriveing data from URL.
 class func:
+    #Creation of JSON file by opening/ creating it and writing data into file by dump().
     def create_json(self,data,file_name):
         with open(file_name,"w") as f:
             return json.dump(data,f)
-    
+        
+    #Reading data from JSON file using load().
     def read_json(self,f):
         with open(f) as f:
             return json.load(f)
-
+        
+    #Checking whetehr URL exists or not.
     def check_url(self, url):
         try:
             url = requests.get(url)
+            #Return True if URL exists.
             return True
         except:
+            #Return False if URL doesnot exists.
             return False
 
     def read_url(self, url):
+        #Retrieving data from URL using requests.get() and then returning it by converting into json object.
         url = requests.get(url)
         return url.json()
         
