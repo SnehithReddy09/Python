@@ -22,14 +22,14 @@ def create_json(data,file_name):
         return json.dump(data,f)
 
 
-list_1=list(range(10,200))
+list_1=np.arange(0,200)
 list1={}
 for i in range(len(list_1)):
     #finding factorial of number using np.math.factorial() and appending them in dictionary.
     list1[i]=np.math.factorial(list_1[i])
 
 
-list_2=list(range(1,10000))
+list_2=np.arange(1,10000)
 list_3={}
 for i in list_2:
     j=str(i*i)
