@@ -49,18 +49,23 @@ class Suman(db.Model):
 # From the API requesting data and then storing it in DB and saving the changes.
 @app.route('/write', methods = ['POST'])
 def write():
+    #Requesting id, name and email from POSTMAN
     id=request.get_json()["id"]
     name = request.get_json()["name"]
     email = request.get_json()["email"]
     api_user_model = APIUserModel(id=id,name = name, email = email)
     save_to_database = db.session()
     try:
+	#Added to database
         save_to_database.add(api_user_model)
+	#After data is added sucessfully comit is done to save the database.
         save_to_database.commit()
     except:
+	#If insertion does not happens we have to go to the previous stage py performing rollback operation.
         save_to_database.rollback()
+	#Used for free the memory
         save_to_database.flush()   
-    
+    #Returning the jsonify object as response to the insertion data.
     return jsonify({"message":"success"})
 
 # fetch data from server
@@ -77,6 +82,7 @@ def fetch_all():
 @app.route('/display/<int:id>', methods=['GET'])
 def fetch_by_id(id):
     try:
+	# Getting data based on id using filter_by()
         data = APIUserModel.query.filter_by(id=id).first()
         return jsonify({"id":data.id, "name":data.name, "email":data.email})
     except:
@@ -104,6 +110,7 @@ def update(id):
         save_to_database.rollback()
         save_to_database.flush()
     id=api_user_model.id
+    #data after updation is stored in this data variable.
     data=APIUserModel.query.filter_by(id=id).first()
     #returns the list which consists of data before updation and after updation.
     return jsonify([{"id":x, "name":y, "email":z},{"update":"to"},{"id":data.id, "name":data.name, "email":data.email}])
@@ -114,6 +121,7 @@ def delete(id):
     a = APIUserModel.query.filter_by(id=id).first()
     try:
         save_to_database = db.session 
+	# First find the data based on id using filter_by() and the delete the data using delete().
         APIUserModel.query.filter_by(id=id).delete()
         save_to_database.commit()
 	#returning the data which is been deleted for displaying.
