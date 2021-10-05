@@ -108,3 +108,17 @@ def vaccination_administration_between_countries(country1,country2):
 
 
 vaccination_administration_between_countries('India','United States')
+
+''' OUTPUT 
+
+Most widely used vaccine #  Pfizer/BioNTech
+vaccines used in India #  Covaxin, Oxford/AstraZeneca
+
+India  {'1,2021': 28323206.0, '2,2021': 153284083.0}
+United States  {'12,2020': 9044666.0, '1,2021': 318860802.0, '2,2021': 736674472.0}
+
+United States % of vaccinated more than India in December year 2020 is 100
+United States % of vaccinated more than India in January year 2021 is  91.11737603921601
+United States % of vaccinated more than India in Febrauary year 2021 is  79.19242639373012
+
+'''
