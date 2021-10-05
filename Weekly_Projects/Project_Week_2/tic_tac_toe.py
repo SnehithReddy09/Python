@@ -1,3 +1,20 @@
+'''
+PROGRAM DESCRIPITON:
+	With using Python Numpy module create a game of TIC TAC TOE. 
+    Please consider the following points while creating your project :-
+        1) Use only the Numpy module not anything else of Python Data Science.
+        2) Write your program using the OOPS concept of Python
+'''
+
+# PROGRAMMED BY: PULI SNEHITH REDDY
+# MAIL ID : snehithreddyp@gmail.com
+# DATE    : 20-09-2021
+# VERSION python: 3.7.9
+#         numpy: 1.19
+# CAVEATS : None
+# LICENSE : None
+
+
 import numpy as np
 import random
 import time
