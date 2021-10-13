@@ -1,4 +1,20 @@
 
+'''
+PROGRAM DESCRIPITON:
+	Retirve data from covid_analysis csv file and plot the graphs on the following. 
+    1) Graph of Standard Deviation in Total Vaccinations in USA and India in month of January and February 
+    2) Graph of fully vaccinated people in India and USA 
+    3) Graph of Partially vaccinated people in India and USA
+'''
+
+# PROGRAMMED BY: PULI SNEHITH REDDY
+# MAIL ID : snehithreddyp@gmail.com
+# DATE    : 12-10-2021
+# VERSION : 3.7.9
+# CAVEATS : None
+# LICENSE : None
+
+
 import matplotlib.pyplot as plt 
 from matplotlib import markers 
 import pandas as pd 
