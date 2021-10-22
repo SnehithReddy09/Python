@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="/Details of the Report">Details of the Report</a></li>
+        <li><a href="/analysis">Analysis and Visualization</a></li>
+        <li><a href="/report">Report</a></li>
+      </ul>
+    </div>
+  </nav>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Not responsive demo</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        background-color: gray;
+      }
+
+      body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+      }
+
+      header {
+        background: url(header.jpg) no-repeat center;
+        height: 200px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>My website</h1>
+
+
+        <img src="static/Avg. Deaths due to Each Factor - WORLD.png" alt="">
+
+        <p>Most of the deaths in the world are mainly caused due to High Systolic blood pressure and least number of deaths are caused by discontinued breastfeeding.  </p>
+
+        <img src="static/Number_of_deaths_of_each_factor.png" alt="">
+        <p>The total number of deaths caused due to various factors in the entire world are increasing or decreasing from 1990 to 2017.	</p>
+        <p> The number of deaths caused by Unsafe Water Source, Unsafe Sanitation, no access to handwashing facility, Household air pollution from solid fuels, Non-exclusive breastfeeding and Discontinued breastfeeding is been decreasing almost linearly from 1990 to 2017 due to many advancements in medical field. The number of deaths caused by Child wasting, Child Stunting and low birth for gestation is decreasing linearly from 1990 to 2017.  
+
+            The number of deaths caused due to Secondhand Smoke is almost similar from 1990 to 2017.  
+            
+            The number of deaths caused due to Alcohol use and Drug usage is been increasing linearly. The number of deaths caused by diet low in fruits, diet low in vegetables, low physical activity, High fasting plasma glucose and high total cholesterol is been increasing linearly from 1990 to 2017.  
+
+            The number of deaths caused by Unsafe sex has increased from 1990 to 2005 and from 2005 it has been decreasing.  The number of deaths caused by high body mass index, high systolic blood pressure, smoking and low bone mineral density is been increasing from 1990 to 2017.  
+
+            The number of deaths caused by Iron deficiency; Vitamin A deficiency is been decreasing from 1990 to 2017.  The number of deaths caused due to Air Pollution is almost similar from 1990 to 2017 as the number of people and as well as the pollution is increasing in the same frequency.  
+
+            The number of deaths caused due to Outdoor air pollution, Diet high in sodium, Diet low in whole grains and diet low in nuts and seeds is been increasing linearly from 1990 to 2017. </p>
+        
+
+            <img src="static/High_body_mass_index vs High_systolic_blood_pressure.png" alt="">
+            <p>Dependent variable: High systolic blood pressure 
+
+                Independent variable: Low physical Activity 
+                
+                Linear Regression technique is used to find out how high systolic blood pressure depends on high body mass index. The deaths due to high systolic blood pressure have not increased exponentially with the increase of deaths due to high body mass index as the data is very close to the regression line.  
+                
+                The regression coefficient obtained is 1.34 which is close to 1 implies that deaths due to high systolic blood pressure can be predicted using deaths due to high body mass index.  </p>
+
+                <img src="static/High_body_mass_index vs high_fasting_plasma_glucose.png" alt="">
+                <p>Dependent variable: High fasting plasma glucose 
+
+                    Independent variable: High body mass index 
+                    
+                    Linear Regression technique is used to find out how high fasting plasma glucose depends on high body mass index. The deaths due to high fasting plasma glucose have not increased exponentially with the increase of deaths due to high body mass index as the data is very close to the regression line.  
+                    
+                    The regression coefficient obtained is 1.24 which is close to 1 implies that deaths due to high fasting plasma glucose can be predicted using deaths due to high body mass index.  </p>
+
+
+                    <img src="static/non_exclusive_breastfeeding vs high_fasting_plasma_glucose.png" alt="">
+                    <p> Dependent variable: High fasting plasma glucose 
+
+                        Independent variable: non-exclusive breastfeeding 
+                        
+                        Linear Regression technique is used to find out how high fasting plasma glucose depends on high body mass index. The deaths due to high fasting plasma glucose have not decreased exponentially with the increase of deaths due to non-exclusive breastfeeding as the data is very close to the regression line.  
+                        
+                        The regression coefficient obtained is –8.4 implies that deaths due to high fasting plasma glucose can be predicted using deaths due to non-exclusive breastfeeding.. </p>
+
+
+                        <img src="static/Alcohol vs High_fasting_plasma_glucose.png" alt="">
+                        <p> Dependent variable: High fasting plasma glucose 
+
+                            Independent variable: Alcohol 
+                            
+                            Polynomial regression technique is applied on number of deaths caused due to alcohol and number of deaths caused due to high fasting blood glucose. 
+                            
+                            The r2 score obtained is 0.9926 which is almost close to 1 that implies that deaths caused due to high fasting plasma glucose is depending on deaths caused due to alcohol. </p>
+
+                            <img src="static/Alcohol vs High_systolic_blood_pressure.png" alt="">
+                            <p>Dependent variable: High systolic blood pressure 
+
+                                Independent variable: Alcohol 
+                                
+                                Polynomial regression technique is applied on number of deaths caused due to alcohol and number of deaths caused due to High systolic blood pressure. 
+                                
+                                The r2 score obtained is 0.9832 which is almost close to 1 that implies that deaths caused due to high systolic blood pressure is depending on deaths caused due to alcohol.  </p>
+
+
+                                <img src="static/Alcohol vs Iron_Deficiency.png" alt=""> 
+                                <p> Dependent variable:  Iron deficiency 
+
+                                    Independent variable: Alcohol 
+                                    
+                                    Polynomial regression technique is applied on number of deaths caused due to alcohol and number of deaths caused due to Iron deficiency. 
+                                    
+                                    The r2 score obtained is 0.9806 which is almost close to 1 that implies that deaths caused due to Iron deficiency is depending on deaths caused due to alcohol. </p>
+
+                                    
+                             <img src="static/Diet high in sodium vs High_systolic_blood_pressure.png" alt=""> 
+                             <p> Dependent variable: High systolic blood pressure. 
+
+                                Independent variable: Diet high in Sodium 
+                                
+                                Polynomial regression technique is applied on number of deaths caused due to Diet high in Sodium and number of deaths caused due to High systolic blood pressure. 
+                                
+                                The r2 score obtained is 0.9937 which is almost close to 1 that implies that deaths caused due to High systolic blood pressure is depending on deaths caused due to diet high in sodium. </p>
+                                
+                                <img src="static/Discontinued_breastfeeding vs Child_Stunting.png" alt=""> 
+                                <p>Dependent variable: Child Stunting  
+
+                                    Independent variable: Discontinued breastfeeding 
+                                    
+                                    Polynomial regression technique is applied on number of deaths caused due to Discontinued breastfeeding and number of deaths caused due to Child Stunting. 
+                                    
+                                    The r2 score obtained is 0.9926 which is almost close to 1 that implies that deaths caused due to Child Stunting is depending on deaths caused due to Discontinued breastfeeding. </p> 
+
+                                    <img src="static/Low_physical_activity vs High_body_mass_index.png" alt=""> 
+                                    <p> Dependent variable: High body mass index 
+
+                                        Independent variable: Low physical Activity 
+                                        
+                                        Polynomial regression technique is applied on number of deaths caused due to High body mass index g and number of deaths caused due to low physical activity. 
+                                        
+                                        The r2 score obtained is 0.9971 which is almost close to 1 that implies that deaths caused due to high body mass index is depending on deaths caused due to low physical activity. </p>
+
+
+     
+
